@@ -24,10 +24,6 @@ from scanner.config_rules import scan_text as scan_configs
 from scanner.scorer import score_findings
 from scanner.utils import extract_zip_to_memory, is_text_path
 
-
-# ------------------------------------------------------------
-# Helper: Get latest version from PyPI
-# ------------------------------------------------------------
 def get_latest_version(pkg_name: str) -> str:
     try:
         resp = requests.get(f"https://pypi.org/pypi/{pkg_name}/json", timeout=10)
@@ -37,10 +33,6 @@ def get_latest_version(pkg_name: str) -> str:
         pass
     return "latest"
 
-
-# ------------------------------------------------------------
-# Streamlit Config
-# ------------------------------------------------------------
 st.set_page_config(page_title="Cyber Health Audit Agent", page_icon="🛡️", layout="wide")
 st.title("🛡️ Cyber Health Audit Agent")
 st.markdown("Perform an automated **security health check** and get one-line fixes to secure your app.")
