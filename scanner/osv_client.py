@@ -52,7 +52,7 @@ class OSVClient:
                     continue
                 seen_ids.add(vid)
 
-                # extract fixed version info
+                
                 fixed_versions = []
                 for aff in v.get("affected", []):
                     for rng in aff.get("ranges", []):
