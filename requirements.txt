@@ -1,4 +1,3 @@
---upgrade --use-pep517
 streamlit>=1.39.0
 pathspec
 requests
