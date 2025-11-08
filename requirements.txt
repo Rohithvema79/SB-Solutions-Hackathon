@@ -1,5 +1,8 @@
-streamlit>=1.37.0
-requests>=2.32.0
-packaging>=24.0
-google-generativeai>=0.8.3
-pyyaml>=6.0.2
+streamlit
+pathspec
+requests
+google-generativeai
+python-dotenv
+reportlab
+smtplib
+PyPDF2
