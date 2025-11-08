@@ -1,0 +1,54 @@
+{
+  "project_name": "Cyber Health Audit Agent",
+  "overall_score": 88,
+  "summary": "Your project is in good health with a few outdated dependencies and configuration warnings. Recommended to update vulnerable packages and secure configurations.",
+  "vulnerability_findings": [
+    {
+      "package": "Flask",
+      "current_version": "1.1.1",
+      "recommended_version": "3.0.4",
+      "issue": "Outdated version with known security vulnerabilities",
+      "fix": "Upgrade Flask to version >=3.0.4"
+    },
+    {
+      "package": "requests",
+      "current_version": "2.25.0",
+      "recommended_version": "2.31.0",
+      "issue": "Contains SSL-related security patches in newer versions",
+      "fix": "Upgrade requests to version >=2.31.0"
+    }
+  ],
+  "secret_findings": [
+    {
+      "path": "app.py",
+      "issue": "Hardcoded API key detected",
+      "fix": "Store API keys in .env and load them using os.getenv()"
+    }
+  ],
+  "config_findings": [
+    {
+      "path": "config.py",
+      "issue": "DEBUG=True found in production configuration",
+      "fix": "Set DEBUG=False before deploying to production"
+    },
+    {
+      "path": ".env",
+      "issue": "Database credentials exposed in environment file",
+      "fix": "Ensure .env is added to .gitignore and not pushed to repositories"
+    }
+  ],
+  "ai_audit_summary": {
+    "model": "Gemini 2.0 Flash",
+    "analysis": "Detected insecure configuration patterns and outdated libraries. No critical secrets found. Suggested proactive security improvements.",
+    "recommendations": [
+      "Upgrade Flask and Requests to latest secure versions",
+      "Use hashed passwords and environment-based secrets",
+      "Restrict CORS and disable debug mode in production"
+    ]
+  },
+  "report_metadata": {
+    "generated_at": "2025-11-08T13:05:00Z",
+    "report_name": "Cyber_Health_Audit_Agent_Report.pdf",
+    "emailed_to": "user"
+  }
+}

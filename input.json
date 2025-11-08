@@ -1,0 +1,23 @@
+{
+  "project_name": "Cyber Health Audit Agent",
+  "uploaded_by": "user",
+  "inputs": {
+    "requirements_file": "requirements.txt",
+    "project_zip": "CyberHealthAuditAgent.zip",
+    "dependencies": [
+      "Flask==1.1.1",
+      "requests==2.25.0",
+      "lxml==4.9.0",
+      "urllib3==2.0.0",
+      "PyYAML==5.3",
+      "Jinja2==2.10"
+    ]
+  },
+  "scan_options": {
+    "check_vulnerabilities": true,
+    "check_hardcoded_secrets": true,
+    "check_config_issues": true,
+    "gemini_deep_scan": true
+  },
+  "timestamp": "2025-11-08T13:00:00Z"
+}
