@@ -1,8 +1,9 @@
-streamlit
+--upgrade --use-pep517
+streamlit>=1.39.0
 pathspec
 requests
 google-generativeai
 python-dotenv
 reportlab
-smtplib
 PyPDF2
+email-validator
